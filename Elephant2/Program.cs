@@ -30,4 +30,10 @@ while (true)
 
         Console.WriteLine("References have been swapped");
     }
+    else
+    {
+        return;
+    }
+
+    Console.WriteLine();
 }
