@@ -8,24 +8,26 @@ Console.WriteLine("Press 1 for Lloyd, 2 for Lucinda, 3 to swap");
 
 while (true)
 {
-    int value = Console.Read();
-    if (value == '1')
+    char input = Console.ReadKey(true).KeyChar;
+    if (input == '1')
     {
         Console.WriteLine("You pressed 1");
         lloyd.WhoAmI();
     }
-    else if (value == '2')
+    else if (input == '2')
     {
-        Console.WriteLine("You pressed 1");
+        Console.WriteLine("You pressed 2");
         lucinda.WhoAmI();
     }
-    else if (value == '3')
+    else if (input == '3')
     {
         Console.WriteLine("You pressed 3");
-        Console.WriteLine("References have been swapped");
+       
         Elephant holder;
         holder = lloyd;
         lloyd = lucinda;
         lucinda = holder;
+
+        Console.WriteLine("References have been swapped");
     }
 }
